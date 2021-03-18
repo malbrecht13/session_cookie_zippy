@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,8 @@
     <title>Zippy's Used Autos'</title>
 </head>
 <body class="container-fluid text-center">
-    
+    <header">
+        <a id="register_link" href=".?action=register">Register</a>
+    </header>
     <main>
     <h1 class="text-center">🚘 Zippy's Used Autos 🚘</h1>

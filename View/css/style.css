@@ -15,9 +15,12 @@ body {
     padding: 0 3px;
 }
 
+
 main {
     padding: 20px 0;
 }
+
+
 
 .vehicle_dropdown_boxes {
     display: flex;
@@ -98,4 +101,10 @@ td {
         margin-left: 25vw;
         margin-right: 25vw;
     }
+}
+
+#register_link {
+    position: absolute;
+    top: 20px;
+    right: 4%;
 }
