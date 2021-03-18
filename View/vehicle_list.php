@@ -1,5 +1,4 @@
 <?php include('header.php'); ?>
-
 <form action="." method="POST" class="sortBy__form">
     <div class="vehicle_dropdown_boxes">
     <select name="make_id" class="auto_selector text-primary">

@@ -16,5 +16,46 @@
 
     $vehicles = list_vehicles($make_id, $sort_by, $type_id, $class_id);
 
-    include('View/vehicle_list.php');
+    $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
+
+    switch($action) {
+        case 'register':
+            $first_name = filter_input(INPUT_GET, 'first_name', FILTER_SANITIZE_STRING);
+            if(isset($first_name)) {
+                $lifetime = 3600;
+                $path = '/';
+                session_set_cookie_params($lifetime, $path);
+                session_start();
+                $_SESSION['userid'] = $first_name;
+            }
+            include('View/register.php');
+            break;
+        case 'logout':
+            session_start();
+            $_SESSION['userid'];
+            $first_name = $_SESSION['userid'];
+            unset($_SESSION['userid']);
+            $_SESSION = array();
+            session_destroy();
+            $name = session_name();
+            $expire = time() - 1;
+            $params = session_get_cookie_params();
+            $path = $params['path'];
+            $domain = $params['domain'];
+            $secure = $params['secure'];
+            $httponly = $params['httponly'];
+            setcookie($name, '', $expire, $path, $domain, $secure, $httponly);
+            include('View/logout.php');
+            break;
+        default:
+            if($action == NULL) {
+                include('View/vehicle_list.php');
+            } else {
+                session_start();
+                include('View/vehicle_list.php');
+            }
+            break;
+    }
+
+    
       

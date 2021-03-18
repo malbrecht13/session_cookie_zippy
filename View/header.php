@@ -14,8 +14,15 @@
     <title>Zippy's Used Autos'</title>
 </head>
 <body class="container-fluid text-center">
-    <header">
-        <a id="register_link" href=".?action=register">Register</a>
+    <header>
+    <?php if($action != 'register' && !isset($_SESSION['userid']) && $action != 'logout') { ?>
+        <a class="register_link" href=".?action=register">Register</a>
+    <?php } else if($action != 'register' && isset($_SESSION['userid']) && $action != 'logout') { ?>
+        <p class="register_link">Welcome, <?= $_SESSION['userid']; ?>! (<a href=".?action=logout">Sign Out</a>)</p>
+    <?php } else { ?>
+        <div class="register_link">&nbsp;</div>
+    <?php } ?>
     </header>
     <main>
     <h1 class="text-center">🚘 Zippy's Used Autos 🚘</h1>
+    
