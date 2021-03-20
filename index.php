@@ -1,4 +1,9 @@
 <?php
+
+    $lifetime = 3600;
+    $path = '/';
+    session_set_cookie_params($lifetime, $path);
+    session_start();
     
     require('model/database.php');
     require('model/vehicles_db.php');
@@ -22,17 +27,11 @@
         case 'register':
             $first_name = filter_input(INPUT_GET, 'first_name', FILTER_SANITIZE_STRING);
             if(isset($first_name)) {
-                $lifetime = 3600;
-                $path = '/';
-                session_set_cookie_params($lifetime, $path);
-                session_start();
                 $_SESSION['userid'] = $first_name;
             }
             include('View/register.php');
             break;
         case 'logout':
-            session_start();
-            $_SESSION['userid'];
             $first_name = $_SESSION['userid'];
             unset($_SESSION['userid']);
             $_SESSION = array();
@@ -48,12 +47,7 @@
             include('View/logout.php');
             break;
         default:
-            if($action == NULL) {
-                include('View/vehicle_list.php');
-            } else {
-                session_start();
-                include('View/vehicle_list.php');
-            }
+            include('View/vehicle_list.php');
             break;
     }
 
