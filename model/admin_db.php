@@ -36,9 +36,7 @@
         $statement->execute;
         $count = $statement->fetch;
         if(isset($count)) {
-            return(!empty($count));
-        } else {
-            return false;
-        }
+            return !empty($count);
+        } 
     }
 ?>
