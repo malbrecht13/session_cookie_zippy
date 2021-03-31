@@ -13,9 +13,14 @@
                 $page = 'register';
                 include('view/register.php');
             } else {
-                add_admin($username, $password);
-                $_SESSION['is_valid_admin'] = true;
-                header('Location: .?action=list_vehicles');
+                try {
+                    add_admin($username, $password);
+                    $_SESSION['is_valid_admin'] = true;
+                    header('Location: .?action=list_vehicles');
+                } catch(Exception $e) {
+                    echo $e->getMessage();
+                }
+                
             }
             break;
     }
