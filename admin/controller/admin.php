@@ -18,7 +18,8 @@
                     $_SESSION['is_valid_admin'] = true;
                     header('Location: .?action=list_vehicles');
                 } catch(Exception $e) {
-                    echo $e->getMessage();
+                     $error = $e->getMessage();
+                     include('view/error.php');
                 }
                 
             }
