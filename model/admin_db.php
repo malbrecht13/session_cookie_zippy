@@ -1,7 +1,7 @@
 <?php
     function add_admin($username, $password) {
         global $db;
-        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $hash = password_hash($password, PASSWORD_BCRYPT);
         $query = 'INSERT INTO administrators (username, password)
                   VALUES (:username, :password)';
         $statement = $db->prepare($query);
@@ -35,6 +35,10 @@
         $statement->bindValue(':username', $username);
         $statement->execute;
         $count = $statement->fetch;
-        return !empty($count);
+        if(isset($count)) {
+            return(!empty($count));
+        } else {
+            return false;
+        }
     }
 ?>

@@ -3,7 +3,7 @@
 
     <h3 class="register_header">Register a new admin user</h3>
 
-    <?php if($errors) { ?>
+    <?php if(isset($errors)) { ?>
         <ul>
         <?php foreach ($errors as $error) : ?>
             <li class="register_error_message"><?= $error ?></li>
@@ -11,7 +11,7 @@
         </ul> 
     <?php } ?>
     
-    <form action="." method="POST">
+    <form action="." method="POST" class="edit_vehicle__form">
         <input type="hidden" name="action" value="register">
         <div class="add_vehicle__input">
             <label for="username">Username:</label>

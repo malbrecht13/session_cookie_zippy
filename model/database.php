@@ -7,7 +7,7 @@ $password = 'l3pzfll323cekhd8';
 try {
     $db = new PDO($dsn, $username, $password);
 } catch(PDOException $e) {
-    echo $e;
+    echo $e->getMessage();
 }
 
 
