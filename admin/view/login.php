@@ -9,7 +9,7 @@
         <h2 class="text-center">Admin</h2>
 <?php 
     if($login_message) { ?>
-        <h3 class="text-center"><?= $login_message ?></h3>
+        <h3 class="text-center" style="color: red;"><?= $login_message ?></h3>
     <?php } else { ?>
         <h3 class="text-center">Please fill in your credentials to login</h3>
     <?php } ?>

@@ -2,6 +2,12 @@
 
 
     switch($action) {
+        case 'logout':
+            $_SESSION = array();
+            session_destroy();
+            $login_message = "You have been logged out.";
+            include('view/login.php');
+            break;
         case 'show_login':
             include('view/login.php');
             break;
