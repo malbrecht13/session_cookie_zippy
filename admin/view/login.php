@@ -18,6 +18,7 @@
         .add_vehicle__input {
             display: flex;
             flex-direction: column;
+            font-size: 1.8rem;
         }
         .add_vehicle__button {
             margin-top: 10px;
@@ -34,7 +35,6 @@
             flex-direction: column;
             padding: 30px;
             min-width: 300px;
-            min-height: 30vh;
             max-width: 1000px;
         }
     </style>
