@@ -37,9 +37,9 @@
         $row = $statement->fetch();
         $statement->closeCursor();
         if(isset($row)) {
-            echo $row[0];
-        } else {
             return false;
+        } else {
+            return true;
         }
     }
 ?>
