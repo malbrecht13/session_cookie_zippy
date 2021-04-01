@@ -37,7 +37,7 @@
         $row = $statement->fetch();
         $statement->closeCursor();
         if(isset($row)) {
-            return !empty($row[0]);
+            return $row[0] !== '0';
         }
     }
 ?>
