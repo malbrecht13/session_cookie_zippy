@@ -73,6 +73,10 @@ select, input[type="number"], input[type="text"] {
     margin: 0 auto;
     max-width: 300px;
 }
+.register_error_message {
+    max-width: 500px;
+    color: red;
+}
     </style>
 
 </head>
