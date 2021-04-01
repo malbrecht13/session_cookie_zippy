@@ -35,6 +35,8 @@
         $statement->bindValue(':username', $username);
         $statement->execute;
         $rowcount = $statement->rowCount();
-        return !empty($rowcount);
+        if(isset($rowcount)) {
+            return $rowcount > 0;
+        }
     }
 ?>
