@@ -27,7 +27,7 @@
     }
 
     if(!isset($_SESSION['is_valid_admin'])) {
-        $action = 'login';
+        $action = 'show_login';
     }
 
     switch($action) {
