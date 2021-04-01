@@ -28,7 +28,7 @@
 
     function username_exists($username) {
         global $db;
-        $query = 'SELECT COUNT(*) as count
+        $query = 'SELECT COUNT(*)
                   FROM administrators
                   WHERE username = :username';
         $statement = $db->prepare($query);
@@ -37,7 +37,9 @@
         $row = $statement->fetch();
         $statement->closeCursor();
         if(isset($row)) {
-            return $row[0] !== 0;
+            return !empty($row[0]);
+        } else {
+            return false;
         }
     }
 ?>
