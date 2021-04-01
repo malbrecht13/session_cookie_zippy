@@ -1,4 +1,4 @@
-<?php
+<?php include('header.php');
     
     if(isset($login_message)) { ?>
         <h3><?= $login_message ?></h3>
@@ -16,5 +16,5 @@
             <label for="password_login">Password:</label>
             <input id="password_login" type="password" name="password" required>
         </div>
-        <button class="btn btn-primary add_vehicle__button" type="submit">Register</button>
+        <button class="btn btn-primary add_vehicle__button" type="submit">Login</button>
     </form>
