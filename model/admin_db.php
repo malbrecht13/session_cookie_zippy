@@ -34,9 +34,9 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
         $statement->execute;
-        $rowcount = $statement->rowCount();
-        if(isset($rowcount)) {
-            return $rowcount > 0;
+        $row = $statement->fetch();
+        if(isset($row)) {
+            return !empty($row['COUNT(*)']);
         }
     }
 ?>
