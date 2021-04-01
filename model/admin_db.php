@@ -36,7 +36,7 @@
         $statement->execute;
         $row = $statement->fetch();
         if(isset($row)) {
-            return $row['COUNT(*)'] !== 0;
+            return $row['COUNT(*)'] != 0;
         }
     }
 ?>
