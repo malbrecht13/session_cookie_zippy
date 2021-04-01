@@ -5,14 +5,14 @@
     <style>
         
         h1 {
-            font-size: 1rem;
+            font-size: 3rem;
         }
 
         h2 {
-            font-size: 0.9rem;
+            font-size: 2.5rem;
         }
         h3 {
-            font-size: 0.8rem;
+            font-size: 2.0rem;
         }
 
         .add_vehicle__input {
@@ -34,7 +34,6 @@
             flex-direction: column;
             margin: 0 auto;
             padding: 30px;
-            max-width: 300px;
             min-width: 200px;
         }
     </style>
