@@ -6,9 +6,7 @@
             include('view/login.php');
             break;
         case 'login':
-            if(!isset($_SESSION['is_valid_admin'])) {
-                include('view/login.php');
-            } else if (is_valid_admin_login($username, $password)) {
+            if(is_valid_admin_login($username, $password)) {
                 $_SESSION['is_valid_admin'] = true;
                 header('Location: .?action=list_vehicles');
             } else {
