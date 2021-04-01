@@ -1,10 +1,6 @@
+<?php include('header.php');
 
-    <body class="container-fluid text-center">
-    <main>
-        <h1 class="text-center">🚘 Zippy's Used Autos 🚘</h1>
-        <h2 class="text-center">Admin</h2>
-
-    <?php if($login_message) { ?>
+    if($login_message) { ?>
         <h3><?= $login_message ?></h3>
     <?php } else { ?>
         <h3>Please fill in your credentials to login</h3>
