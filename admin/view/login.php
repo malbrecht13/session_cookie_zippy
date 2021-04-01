@@ -1,6 +1,6 @@
 <?php include('header.php');
 
-    if($login_message) { ?>
+    if(isset($login_message)) { ?>
         <h3><?= $login_message ?></h3>
     <?php } else { ?>
         <h3>Please fill in your credentials to login</h3>
