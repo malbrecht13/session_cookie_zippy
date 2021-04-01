@@ -24,10 +24,9 @@
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
     if(!$action) {
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
-    }
-
-    if(!isset($_SESSION['is_valid_admin'])) {
-        $action = 'show_login';
+        if(!$action) {
+            $action = 'show_login';
+        }
     }
 
     switch($action) {
