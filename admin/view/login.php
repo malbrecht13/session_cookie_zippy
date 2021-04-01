@@ -1,5 +1,5 @@
-<?php include('header.php');
-
+<?php
+    
     if(isset($login_message)) { ?>
         <h3><?= $login_message ?></h3>
     <?php } else { ?>
