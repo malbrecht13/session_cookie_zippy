@@ -36,6 +36,6 @@
         $statement->execute;
         $count = $statement->fetch();
         $statement->closeCursor();
-        return isset($count[0]);
+        return isset($count['count(*)']);
     }
 ?>
