@@ -36,6 +36,6 @@
         $statement->execute;
         $count = $statement->fetch();
         $statement->closeCursor();
-        return true;
+        return $count !== 0;
     }
 ?>
