@@ -33,9 +33,11 @@
                   WHERE username = :username';
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
-        $statement->execute;
-        $count = $statement->fetch(PDO::FETCH_NUM);
+        $statement->execute();
+        $count = $statement->fetch();
         $statement->closeCursor();
-        return isset($count[0]);
+        if (isset($count[0])) {
+            return !empty($count[0]);
+        }
     }
 ?>
