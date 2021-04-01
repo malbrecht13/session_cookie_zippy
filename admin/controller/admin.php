@@ -2,6 +2,15 @@
 
 
     switch($action) {
+        case 'login':
+            if(is_valid_admin_login($username, $password)) {
+                $_SESSION['is_valid_admin'] = true;
+                header('Location: .?action=list_vehicles');
+            } else {
+                $login_message = 'Incorrect Login / Login Required';
+                include('view/login.php');
+            }
+            break;
         case 'show_register':
             $page = 'register';
             include('view/register.php');

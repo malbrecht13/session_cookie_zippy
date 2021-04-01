@@ -26,6 +26,10 @@
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
     }
 
+    if(!isset($_SESSION['is_valid_admin'])) {
+        $action = 'login';
+    }
+
     switch($action) {
         case 'login':
         case 'show_login':

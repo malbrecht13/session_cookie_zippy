@@ -76,7 +76,7 @@ select, input[type="number"], input[type="text"] {
 .register_error_message {
     max-width: 500px;
     color: red;
-    text-align: center;
+    margin: 0 auto;
 }
     </style>
 
