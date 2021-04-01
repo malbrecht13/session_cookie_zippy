@@ -74,7 +74,6 @@ select, input[type="number"], input[type="text"] {
     max-width: 300px;
 }
 .register_error_message {
-    max-width: 500px;
     color: red;
     margin: 0 auto;
     padding-left: 0;

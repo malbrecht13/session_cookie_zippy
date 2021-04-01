@@ -16,7 +16,7 @@
                 $_SESSION['is_valid_admin'] = true;
                 header('Location: .?action=list_vehicles');
             } else {
-                $login_message = 'Incorrect Login / Login Required';
+                $login_message = 'Incorrect Login';
                 include('view/login.php');
             }
             break;
