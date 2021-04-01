@@ -1,28 +1,5 @@
-<head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
- <style>
-    .add_vehicle__input {
-   display: flex;
-   flex-direction: column;
-}
-    .edit_vehicle__form {
-    border: 3px solid black;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 300px;
-}
- </style>
-</head>
-<body class="container-fluid text-center">
-    <main>
-        <h1 class="text-center">🚘 Zippy's Used Autos 🚘</h1>
-        <h2 class="text-center">Admin</h2>
 
 <?php 
-    echo $login_message;
     if($login_message) { ?>
         <h3><?= $login_message ?></h3>
     <?php } else { ?>
