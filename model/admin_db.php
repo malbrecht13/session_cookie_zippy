@@ -34,8 +34,8 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
         $statement->execute;
-        $count = $statement->fetch();
+        $count = $statement->fetch(FETCH_NUM);
         $statement->closeCursor();
-        return isset($count['count(*)']);
+        return isset($count[0]);
     }
 ?>
