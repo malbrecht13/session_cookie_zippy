@@ -2,6 +2,9 @@
 
 
     switch($action) {
+        case 'show_login':
+            include('view/login.php');
+            break;
         case 'login':
             if(is_valid_admin_login($username, $password)) {
                 $_SESSION['is_valid_admin'] = true;
