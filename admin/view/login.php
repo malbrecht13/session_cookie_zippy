@@ -22,7 +22,7 @@
         <h2 class="text-center">Admin</h2>
 
 <?php 
-    
+    echo $login_message 
     if($login_message) { ?>
         <h3><?= $login_message ?></h3>
     <?php } else { ?>
