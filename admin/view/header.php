@@ -15,14 +15,6 @@
     <style>
         /* admin */
 
-td {
-    font-size: 0.4rem;
-}
-@media only screen and (min-width: 375px) {
-    td {
-        font-size: 0.7rem;
-    }   
-}
 .edit_vehicles_nav__header {
     padding-top: 20px;
 }
@@ -75,8 +67,6 @@ select, input[type="number"], input[type="text"] {
 }
 .register_error_message {
     color: red;
-    margin: 0 auto;
-    padding-left: 0;
 }
     </style>
 
