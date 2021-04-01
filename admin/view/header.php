@@ -77,7 +77,7 @@ select, input[type="number"], input[type="text"] {
     max-width: 500px;
     color: red;
     margin: 0 auto;
-    list-style-type: none;
+    padding-left: 0;
 }
     </style>
 

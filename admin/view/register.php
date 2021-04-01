@@ -6,7 +6,7 @@
     <?php if(isset($errors)) { ?>
         <ul>
         <?php foreach ($errors as $error) : ?>
-            <li class="register_error_message">**<?= $error ?>**</li>
+            <li class="register_error_message"><?= $error ?></li>
             <?php endforeach; ?>
         </ul> 
     <?php } ?>
