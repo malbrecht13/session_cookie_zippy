@@ -22,6 +22,7 @@
         }
         .add_vehicle__button {
             margin-top: 10px;
+            font-size: 1.8rem;
         }
         select, input[type="number"], input[type="text"] {
             border-radius: 5px;
