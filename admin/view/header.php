@@ -83,9 +83,7 @@ select, input[type="number"], input[type="text"] {
 </head>
 <body class="container-fluid text-center">
     <header>
-        <?php if (isset($_SESSION['is_valid_admin'])) { ?>
-            <p class="register_link"><a href=".?action=logout">Sign Out</a></p>
-        <?php } ?>
+        <p class="register_link"><a href=".?action=logout">Sign Out</a></p>
     </header>
     <main>
         <h1 class="text-center">🚘 Zippy's Used Autos 🚘</h1>
