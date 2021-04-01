@@ -35,6 +35,7 @@
         $statement->bindValue(':username', $username);
         $statement->execute;
         $row = $statement->fetch();
+        $statement->closeCursor();
         if(isset($row)) {
             return !empty($row['count']);
         }
