@@ -37,7 +37,7 @@
         $row = $statement->fetch();
         $statement->closeCursor();
         if(isset($row)) {
-            return intval($row[0]) > 0;
+            echo $row[0];
         } else {
             return false;
         }
