@@ -85,3 +85,5 @@ select, input[type="number"], input[type="text"] {
     <main>
         <h1 class="text-center">🚘 Zippy's Used Autos 🚘</h1>
         <h2 class="text-center">Admin</h2>
+
+<?php include('util/valid_admin.php'); ?> 
