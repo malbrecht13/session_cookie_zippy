@@ -36,10 +36,8 @@
         $statement->execute;
         $row = $statement->fetch();
         $statement->closeCursor();
-        if(isset($row)) {
-            return false;
-        } else {
-            return true;
+        if(isset($row[0])) {
+            return !empty($row[0]);
         }
     }
 ?>
