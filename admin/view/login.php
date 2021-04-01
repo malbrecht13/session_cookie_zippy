@@ -32,9 +32,10 @@
             border-radius: 5px;
             display: flex;
             flex-direction: column;
-            margin: 0 auto;
             padding: 30px;
-            min-width: 200px;
+            min-width: 300px;
+            min-height: 30vh;
+            max-width: 1000px;
         }
     </style>
 </head>
