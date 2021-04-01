@@ -1,10 +1,9 @@
 <head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">    
  <style>
-    select, input[type="number"], input[type="text"] {
-    border-radius: 5px;
-    padding: 3px;
-    margin-bottom: 10px;
+    .add_vehicle__input {
+   display: flex;
+   flex-direction: column;
 }
     .edit_vehicle__form {
     border: 3px solid black;
@@ -24,7 +23,7 @@
 
 <?php 
     
-    if(isset($login_message)) { ?>
+    if($login_message) { ?>
         <h3><?= $login_message ?></h3>
     <?php } else { ?>
         <h3>Please fill in your credentials to login</h3>
