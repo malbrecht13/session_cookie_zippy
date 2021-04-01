@@ -34,7 +34,7 @@
         $statement = $db->prepare($query);
         $statement->bindValue(':username', $username);
         $statement->execute;
-        $count = $statement->fetch(FETCH_NUM);
+        $count = $statement->fetch(PDO::FETCH_NUM);
         $statement->closeCursor();
         return isset($count[0]);
     }
