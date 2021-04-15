@@ -16,10 +16,10 @@
     $type_id = filter_input(INPUT_POST, 'type_id', FILTER_VALIDATE_INT);
     $class_id = filter_input(INPUT_POST, 'class_id', FILTER_VALIDATE_INT);
     $sort_by = filter_input(INPUT_POST, 'sort_by', FILTER_SANITIZE_STRING);
-    $makes = get_makes();
-    $types = get_types();
-    $classes = get_classes();
-    $count = get_vehicle_count();
+    $makes = MakesDB::get_makes();
+    $types = TypesDB::get_types();
+    $classes = ClassesDB::get_classes();
+    $count = VehiclesDB::get_vehicle_count();
 
     $action = filter_input(INPUT_POST, 'action', FILTER_SANITIZE_STRING);
     if(!$action) {
