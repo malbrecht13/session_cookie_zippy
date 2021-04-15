@@ -268,21 +268,21 @@
                 }
             } else if ($make_id) {
                 if($sort_by === 'year') {
-                    $vehicles = self::get_vehicles_by_make_and_year($make_id);
+                    $vehicles = MakesDB::get_vehicles_by_make_and_year($make_id);
                 } else {
-                    $vehicles = self::get_vehicles_by_make_and_price($make_id);
+                    $vehicles = MakesDB::get_vehicles_by_make_and_price($make_id);
                 }
             } else if($type_id) {
                 if($sort_by === 'year') {
-                    $vehicles = self::get_vehicles_by_type_and_year($type_id);
+                    $vehicles = TypesDB::get_vehicles_by_type_and_year($type_id);
                 } else {
-                    $vehicles = self::get_vehicles_by_type_and_price($type_id);
+                    $vehicles = TypesDB::get_vehicles_by_type_and_price($type_id);
                 }
             } else if($class_id) {
                 if($sort_by === 'year') {
-                    $vehicles = self::get_vehicles_by_class_and_year($class_id);
+                    $vehicles = ClassesDB::get_vehicles_by_class_and_year($class_id);
                 } else {
-                    $vehicles = self::get_vehicles_by_class_and_price($class_id);
+                    $vehicles = ClassesDB::get_vehicles_by_class_and_price($class_id);
                 }
             } else {
                 if($sort_by === 'year') {
