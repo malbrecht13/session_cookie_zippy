@@ -244,51 +244,51 @@
         public static function list_vehicles($make_id, $sort_by, $type_id, $class_id) {
             if($make_id && $class_id && $type_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_makeTypeClass_and_year($make_id, $type_id, $class_id);
+                    $vehicles = self::get_vehicles_by_makeTypeClass_and_year($make_id, $type_id, $class_id);
                 } else {
-                    $vehicles = get_vehicles_by_makeTypeClass_and_price($make_id, $type_id, $class_id);
+                    $vehicles = self::get_vehicles_by_makeTypeClass_and_price($make_id, $type_id, $class_id);
                 }
             } else if ($make_id && $type_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_makeType_and_year($make_id, $type_id);
+                    $vehicles = self::get_vehicles_by_makeType_and_year($make_id, $type_id);
                 } else {
-                    $vehicles = get_vehicles_by_makeType_and_price($make_id, $type_id);
+                    $vehicles = self::get_vehicles_by_makeType_and_price($make_id, $type_id);
                 }
             } else if ($make_id && $class_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_makeClass_and_year($make_id, $class_id);
+                    $vehicles = self::get_vehicles_by_makeClass_and_year($make_id, $class_id);
                 } else {
-                    $vehicles = get_vehicles_by_makeClass_and_price($make_id, $class_id);
+                    $vehicles = self::get_vehicles_by_makeClass_and_price($make_id, $class_id);
                 }
             } else if ($type_id && $class_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_typeClass_and_year($type_id, $class_id);
+                    $vehicles = self::get_vehicles_by_typeClass_and_year($type_id, $class_id);
                 } else {
-                    $vehicles = get_vehicles_by_typeClass_and_price($type_id, $class_id);
+                    $vehicles = self::get_vehicles_by_typeClass_and_price($type_id, $class_id);
                 }
             } else if ($make_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_make_and_year($make_id);
+                    $vehicles = self::get_vehicles_by_make_and_year($make_id);
                 } else {
-                    $vehicles = get_vehicles_by_make_and_price($make_id);
+                    $vehicles = self::get_vehicles_by_make_and_price($make_id);
                 }
             } else if($type_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_type_and_year($type_id);
+                    $vehicles = self::get_vehicles_by_type_and_year($type_id);
                 } else {
-                    $vehicles = get_vehicles_by_type_and_price($type_id);
+                    $vehicles = self::get_vehicles_by_type_and_price($type_id);
                 }
             } else if($class_id) {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_class_and_year($class_id);
+                    $vehicles = self::get_vehicles_by_class_and_year($class_id);
                 } else {
-                    $vehicles = get_vehicles_by_class_and_price($class_id);
+                    $vehicles = self::get_vehicles_by_class_and_price($class_id);
                 }
             } else {
                 if($sort_by === 'year') {
-                    $vehicles = get_vehicles_by_year();
+                    $vehicles = self::get_vehicles_by_year();
                 } else {
-                    $vehicles = get_vehicles();
+                    $vehicles = self::get_vehicles();
                 }
             }
             return $vehicles;
